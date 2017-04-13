@@ -152,7 +152,7 @@ class Ad_Back_Activator
 
         if ('' == $accessToken && '' == $savedToken->access_token) {
             $notices= get_option('adback_deferred_admin_notices', array());
-            $notices[]= sprintf(__('Registration error', 'ad-back'), get_admin_url(null, 'admin.php?page=ab-settings'));
+            $notices[]= sprintf(__('Registration error', 'adback-solution-to-adblock'), get_admin_url(null, 'admin.php?page=ab-settings'));
             update_option('adback_deferred_admin_notices', $notices);
         }
     }

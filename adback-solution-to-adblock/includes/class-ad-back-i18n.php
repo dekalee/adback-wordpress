@@ -34,7 +34,7 @@ class Ad_Back_i18n
     public function loadPluginTextdomain()
     {
         load_plugin_textdomain(
-            'ad-back',
+            'adback-solution-to-adblock',
             false,
             dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
         );

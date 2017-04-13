@@ -12,13 +12,13 @@
  * @subpackage Ad_Back/admin/partials
  */
 ?>
-<h2><?php _e('Yesterday', 'ad-back'); ?></h2>
+<h2><?php _e('Yesterday', 'adback-solution-to-adblock'); ?></h2>
 <br/>
 <table id="table-page-view" data-ab-table data-ab-type="yesterday-table-page-views" style="display: none;">
     <thead>
     <tr>
         <th class="name"></th>
-        <th class="number"><?php _e( 'Number', 'ad-back'); ?></th>
+        <th class="number"><?php _e( 'Number', 'adback-solution-to-adblock'); ?></th>
         <th class="rate">%</th>
     </tr>
     </thead>
@@ -32,14 +32,14 @@
 </table>
 <hr/>
 <br/>
-<h2><?php _e('Last 7 days', 'ad-back'); ?></h2>
+<h2><?php _e('Last 7 days', 'adback-solution-to-adblock'); ?></h2>
 <br/>
-<h3><?php _e( 'Adblock removals', 'ad-back' ); ?></h3>
-<p><?php _e( '% adblock removals after showing message', 'ad-back' ); ?></p>
-<div data-ab-graph data-ab-type="last-7-adblocker-rate" data-ab-no-period="1" data-ab-no-data="<?php printf(esc_attr('No custom message enabled. You can enable it <a href="%s">here</a>', 'ad-back'), get_admin_url(null, 'admin.php?page=ab-settings') ); ?>" style="width: 95%; height: 200px; margin-bottom: 10px;">
+<h3><?php _e( 'Adblock removals', 'adback-solution-to-adblock' ); ?></h3>
+<p><?php _e( '% adblock removals after showing message', 'adback-solution-to-adblock' ); ?></p>
+<div data-ab-graph data-ab-type="last-7-adblocker-rate" data-ab-no-period="1" data-ab-no-data="<?php printf(esc_attr('No custom message enabled. You can enable it <a href="%s">here</a>', 'adback-solution-to-adblock'), get_admin_url(null, 'admin.php?page=ab-settings') ); ?>" style="width: 95%; height: 200px; margin-bottom: 10px;">
 </div>
 <hr/>
-<h3><?php _e( 'Blocked page view and percent', 'ad-back' ); ?></h3>
+<h3><?php _e( 'Blocked page view and percent', 'adback-solution-to-adblock' ); ?></h3>
 <div data-ab-graph data-ab-type="last-7-page-view-adblocker-percent" data-ab-no-period="1" style="width: 95%; height: 400px; margin-bottom: 50px;">
 </div>
 

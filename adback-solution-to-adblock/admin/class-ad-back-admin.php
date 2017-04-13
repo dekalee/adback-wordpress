@@ -107,27 +107,27 @@ class Ad_Back_Admin extends Ad_Back_Generic
         }
 
         $translation_array = array(
-            'bounce' => __( 'Bounce rate of adblocker users', 'ad-back' ),
-            'ad_blocker' => __('Adblocker activation / deactivation', 'ad-back'),
-            'ad_blocker_percent' => __('Ad blocker percent', 'ad-back'),
-            'blocked_page_view' => __('Blocked page views', 'ad-back'),
-            'browser' => __('Browser', 'ad-back'),
-            'os' => __('OS', 'ad-back'),
-            'percent_adblock_users' => __('Percent adblock users', 'ad-back'),
-            'percent_bounce_adblock_users' => __('Percent bounce adblock users', 'ad-back'),
-            'percent_bounce_all_users' => __('Percent bounce all users', 'ad-back'),
-            'oops' => __('Oops...', 'ad-back'),
-            'invalid_email_or_password' => __('Invalid email or password', 'ad-back'),
-            'the_key_email_and_domain_fields_should_be_fill' => __('The key, email and domain fields should be filled', 'ad-back'),
-            'the_email_and_password_fields_should_be_fill' => __('The email and password fields should be filled', 'ad-back'),
-            'there_is_an_error_in_the_registration' => __('There is an error in the registration: {0}', 'ad-back'),
-            'users_having_ad_blocker' => __('Users having ad blocker', 'ad-back'),
-            'users_who_have_disabled_an_ad_blocker' => __('Users who have disabled an ad blocker', 'ad-back'),
-            'percent_page_view_with_ad_block' => __('Percent page view with AdBlock', 'ad-back'),
-            'percent_page_view' => __('Percent page view', 'ad-back'),
-            'days' => __('days', 'ad-back'),
-            'loading' => __('Loading ...', 'ad-back'),
-            'no_data' => __('No Data', 'ad-back'),
+            'bounce' => __( 'Bounce rate of adblocker users', 'adback-solution-to-adblock' ),
+            'ad_blocker' => __('Adblocker activation / deactivation', 'adback-solution-to-adblock'),
+            'ad_blocker_percent' => __('Ad blocker percent', 'adback-solution-to-adblock'),
+            'blocked_page_view' => __('Blocked page views', 'adback-solution-to-adblock'),
+            'browser' => __('Browser', 'adback-solution-to-adblock'),
+            'os' => __('OS', 'adback-solution-to-adblock'),
+            'percent_adblock_users' => __('Percent adblock users', 'adback-solution-to-adblock'),
+            'percent_bounce_adblock_users' => __('Percent bounce adblock users', 'adback-solution-to-adblock'),
+            'percent_bounce_all_users' => __('Percent bounce all users', 'adback-solution-to-adblock'),
+            'oops' => __('Oops...', 'adback-solution-to-adblock'),
+            'invalid_email_or_password' => __('Invalid email or password', 'adback-solution-to-adblock'),
+            'the_key_email_and_domain_fields_should_be_fill' => __('The key, email and domain fields should be filled', 'adback-solution-to-adblock'),
+            'the_email_and_password_fields_should_be_fill' => __('The email and password fields should be filled', 'adback-solution-to-adblock'),
+            'there_is_an_error_in_the_registration' => __('There is an error in the registration: {0}', 'adback-solution-to-adblock'),
+            'users_having_ad_blocker' => __('Users having ad blocker', 'adback-solution-to-adblock'),
+            'users_who_have_disabled_an_ad_blocker' => __('Users who have disabled an ad blocker', 'adback-solution-to-adblock'),
+            'percent_page_view_with_ad_block' => __('Percent page view with AdBlock', 'adback-solution-to-adblock'),
+            'percent_page_view' => __('Percent page view', 'adback-solution-to-adblock'),
+            'days' => __('days', 'adback-solution-to-adblock'),
+            'loading' => __('Loading ...', 'adback-solution-to-adblock'),
+            'no_data' => __('No Data', 'adback-solution-to-adblock'),
         );
 
         if($this->isConnected()) {
@@ -182,7 +182,7 @@ class Ad_Back_Admin extends Ad_Back_Generic
             }
             include_once( 'partials/ad-back-admin-widget.php');
         } else {
-            printf(__('You must be log in to see stats. Go to <a href="%s">Log in page</a>','ad-back'), get_admin_url(null, 'admin.php?page=ab'));
+            printf(__('You must be log in to see stats. Go to <a href="%s">Log in page</a>','adback-solution-to-adblock'), get_admin_url(null, 'admin.php?page=ab'));
         }
     }
 
@@ -285,9 +285,9 @@ class Ad_Back_Admin extends Ad_Back_Generic
 
         add_menu_page( 'AdBack', 'AdBack', 'manage_options', 'ab', '', plugin_dir_url( __FILE__ ).'/partials/images/_dback_blanc_logo.png', $_wp_last_object_menu );
 
-        add_submenu_page('ab', 'AdBack Statistiques', __('Statistics', 'ad-back'), 'manage_options', 'ab', array($this, 'displayPluginStatsPage'));
-        add_submenu_page('ab', 'AdBack Message', __('Message', 'ad-back'), 'manage_options', 'ab-message', array($this, 'displayPluginMessagePage'));
-        add_submenu_page('ab', 'AdBack Settings', __('Settings', 'ad-back'), 'manage_options', 'ab-settings', array($this, 'displayPluginSettingsPage'));
+        add_submenu_page('ab', 'AdBack Statistiques', __('Statistics', 'adback-solution-to-adblock'), 'manage_options', 'ab', array($this, 'displayPluginStatsPage'));
+        add_submenu_page('ab', 'AdBack Message', __('Message', 'adback-solution-to-adblock'), 'manage_options', 'ab-message', array($this, 'displayPluginMessagePage'));
+        add_submenu_page('ab', 'AdBack Settings', __('Settings', 'adback-solution-to-adblock'), 'manage_options', 'ab-settings', array($this, 'displayPluginSettingsPage'));
     }
 
     public function saveMessageCallback()
@@ -371,7 +371,7 @@ class Ad_Back_Admin extends Ad_Back_Generic
     {
         if (current_user_can('manage_options')) {
             if (!$this->isConnected()) {
-                echo '<div class="notice error adback-incentive is-dismissible"><p>'.__("It's time to analyze your adblock users, activate your adback account !", 'ad-back').' <a href="'. esc_url( get_admin_url(null, 'admin.php?page=ab-settings') ) .'">'.__('Settings').'</a></p></div>';
+                echo '<div class="notice error adback-incentive is-dismissible"><p>'.__("It's time to analyze your adblock users, activate your adback account !", 'adback-solution-to-adblock').' <a href="'. esc_url( get_admin_url(null, 'admin.php?page=ab-settings') ) .'">'.__('Settings').'</a></p></div>';
             }
         }
     }

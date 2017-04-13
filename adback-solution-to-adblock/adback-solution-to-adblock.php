@@ -21,7 +21,7 @@
  * Author URI:        https://www.adback.co
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       ad-back
+ * Text Domain:       adback-solution-to-adblock
  * Domain Path:       /languages
  */
 

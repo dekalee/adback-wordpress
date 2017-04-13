@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ad-back\n"
-"POT-Creation-Date: 2017-04-13 15:38+0200\n"
+"Project-Id-Version: adback-solution-to-adblock\n"
+"POT-Creation-Date: 2017-04-13 16:44+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ad-back.php:36 admin/class-ad-back-admin.php:290
+#: adback-solution-to-adblock.php:36 admin/class-ad-back-admin.php:290
 #: admin/class-ad-back-admin.php:374
 msgid "Settings"
 msgstr "Settings"
