@@ -14,49 +14,49 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
-<h1 class="ab-lefty"><?php _e( 'AdBack : The stats of your AdBlock audience', 'ad-back' ); ?></h1>
+<h1 class="ab-lefty"><?php _e( 'AdBack : The stats of your AdBlock audience', 'adback-solution-to-adblock' ); ?></h1>
 <div class="ab-share">
     <div class="ab-share-actions">
         <a target="_blank"
            href="https://twitter.com/intent/tweet?text=<?php echo urlencode("Re-establish dialogue and monetize your adblocked audience with this stunning WordPress plugin"); ?>&url=http://bit.ly/2oLYrHs&via=adback_co"
-           class="ab-tweet"><span></span><?php _e( 'Tweet about it', 'ad-back' ); ?>
+           class="ab-tweet"><span></span><?php _e( 'Tweet about it', 'adback-solution-to-adblock' ); ?>
         </a>
         <a target="_blank" href="https://wordpress.org/support/plugin/adback-solution-to-adblock/reviews/"
-           class="ab-review"><span></span><?php _e( 'Leave a review', 'ad-back' ); ?>
+           class="ab-review"><span></span><?php _e( 'Leave a review', 'adback-solution-to-adblock' ); ?>
         </a>
     </div>
     <div class="clear"></div>
 </div>
 <p>
-    <?php _e('Statistics description', 'ad-back'); ?>
+    <?php _e('Statistics description', 'adback-solution-to-adblock'); ?>
 </p>
 <hr class="clear">
 
-<h2><?php _e( 'Blocked page view and percent', 'ad-back' ); ?></h2>
-<h4><?php _e( 'Blocked page view and percent - Sub', 'ad-back' ); ?></h4>
+<h2><?php _e( 'Blocked page view and percent', 'adback-solution-to-adblock' ); ?></h2>
+<h4><?php _e( 'Blocked page view and percent - Sub', 'adback-solution-to-adblock' ); ?></h4>
 <div data-ab-graph data-ab-type="page-view-adblocker-percent" style="width: 95%; height: 400px; margin-bottom: 50px;">
 </div>
 <hr>
 
 
-<h2><?php _e( 'New - former adblock users', 'ad-back' ); ?></h2>
-<h4><?php _e( 'New - former adblock users - Sub', 'ad-back' ); ?></h4>
+<h2><?php _e( 'New - former adblock users', 'adback-solution-to-adblock' ); ?></h2>
+<h4><?php _e( 'New - former adblock users - Sub', 'adback-solution-to-adblock' ); ?></h4>
 <div data-ab-graph data-ab-type="adblocker-new-old" style="width: 95%; height: 400px; margin-bottom: 50px;">
 </div>
 <hr>
 
-<h2><?php _e( 'Bounce rate of adblocker users', 'ad-back' ); ?></h2>
+<h2><?php _e( 'Bounce rate of adblocker users', 'adback-solution-to-adblock' ); ?></h2>
 <div data-ab-graph data-ab-type="bounce" style="width: 95%; height: 400px; margin-bottom: 50px;">
 </div>
 <hr>
 
-<h2><?php _e( 'Browser', 'ad-back' ); ?></h2>
+<h2><?php _e( 'Browser', 'adback-solution-to-adblock' ); ?></h2>
 <div data-ab-graph data-ab-type="browser" style="width: 95%; height: 400px; margin-bottom: 50px;">
 </div>
 <hr>
 
 <center>
-	<a href="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>" target="_blank" class="button button-primary button-ab"><?php esc_html_e('Discover', 'ad-back'); ?></a>
+	<a href="<?php _e('https://www.adback.co/en/sites/dashboard', 'adback-solution-to-adblock'); ?>" target="_blank" class="button button-primary button-ab"><?php esc_html_e('Discover', 'adback-solution-to-adblock'); ?></a>
 </center>
 
 <script type="text/javascript">
