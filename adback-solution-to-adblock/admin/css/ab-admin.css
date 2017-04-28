@@ -353,6 +353,20 @@ a.button.button-ab {
     width: 25%;
 }
 
+.tabs a{
+    display: inline-block;
+    border: 1px solid #d4d4d4;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    color: #444;
+    text-decoration: none;
+    background-color: #b9b9b9
+}
+
+.tabs a.current{
+    background-color: transparent;
+}
 #block-progression{
     background-color: #54AFF6;
     padding: 10px;

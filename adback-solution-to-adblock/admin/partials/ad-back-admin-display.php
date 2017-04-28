@@ -22,8 +22,8 @@
 <hr class="clear">
 
 <div class="tabs">
-    <a href="#global-stats">Global Statistique</a>
-    <a href="#money-stats">Monetisation Statistique</a>
+    <a href="#global-stats" class="current"><?php _e('Global Statistics', 'ad-back'); ?></a>
+    <a href="#money-stats"><?php _e('Monetisation Statistics', 'ad-back'); ?></a>
 </div>
 
 
@@ -109,6 +109,8 @@
                 if ($($(this).attr('href')).is(':visible')) {
                     return false;
                 }
+                $(this).siblings('a.current').removeClass('current');
+                $(this).addClass('current');
                 $('.tab').hide();
                 $($(this).attr('href')).show();
                 return false;
