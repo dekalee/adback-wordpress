@@ -21,6 +21,13 @@
 </p>
 <hr class="clear">
 
+<div class="tabs">
+    <a href="#global-stats">Global Statistique</a>
+    <a href="#money-stats">Monetisation Statistique</a>
+</div>
+
+
+<div id="global-stats" class="tab">
 <div id="ab-full-app">
     <div id="vue-app">
         <grid>
@@ -76,7 +83,10 @@
     <a href="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>" target="_blank"
        class="button button-primary button-ab"><?php esc_html_e('Discover', 'ad-back'); ?></a>
 </center>
+</div>
+<div id="money-stats" class="tab" style="display:none;">
 
+</div>
 <script type="text/javascript">
     window.onload = function () {
         if (typeof adbackjs === 'object') {
@@ -93,5 +103,18 @@
                 });
             })(jQuery);
         }
+
+        (function($) {
+            $('.tabs a').click(function () {
+                console.log($($(this).attr('href')));
+                if ($($(this).attr('href')).is(':visible')) {
+                    return false;
+                }
+                $('.tab').hide();
+                $($(this).attr('href')).show();
+                return false;
+            });
+
+        })(jQuery);
     }
 </script>
