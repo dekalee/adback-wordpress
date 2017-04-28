@@ -106,7 +106,6 @@
 
         (function($) {
             $('.tabs a').click(function () {
-                console.log($($(this).attr('href')));
                 if ($($(this).attr('href')).is(':visible')) {
                     return false;
                 }
