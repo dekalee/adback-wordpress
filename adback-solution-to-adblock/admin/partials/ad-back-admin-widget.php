@@ -12,13 +12,16 @@
  * @subpackage Ad_Back/admin/partials
  */
 ?>
+<div id="vue-app">
 <h2><?php _e('Yesterday', 'ad-back'); ?></h2>
 <br/>
+<grid id="table-page-view" type="yesterday-table-page-views">
+</grid><!--
 <table id="table-page-view" data-ab-table data-ab-type="yesterday-table-page-views" style="display: none;">
     <thead>
     <tr>
         <th class="name"></th>
-        <th class="number"><?php _e( 'Number', 'ad-back'); ?></th>
+        <th class="number"><?php /*_e( 'Number', 'ad-back'); */?></th>
         <th class="rate">%</th>
     </tr>
     </thead>
@@ -29,20 +32,20 @@
         <td class="rate"></td>
     </tr>
     </tbody>
-</table>
+</table>-->
 <hr/>
 <br/>
 <h2><?php _e('Last 7 days', 'ad-back'); ?></h2>
 <br/>
 <h3><?php _e( 'Adblock removals', 'ad-back' ); ?></h3>
 <p><?php _e( '% adblock removals after showing message', 'ad-back' ); ?></p>
-<div data-ab-graph data-ab-type="last-7-adblocker-rate" data-ab-no-data="<?php printf(esc_attr('No custom message enabled. You can enable it <a href="%s">here</a>', 'ad-back'), get_admin_url(null, 'admin.php?page=ab-settings') ); ?>" style="width: 95%; height: 200px; margin-bottom: 10px;">
-</div>
+<graph type="last-7-adblocker-rate" data-ab-no-data="<?php printf(esc_attr('No custom message enabled. You can enable it <a href="%s">here</a>', 'ad-back'), get_admin_url(null, 'admin.php?page=ab-settings') ); ?>" style="width: 95%; height: 200px; margin-bottom: 10px;">
+</graph>
 <hr/>
 <h3><?php _e( 'Blocked page view and percent', 'ad-back' ); ?></h3>
-<div data-ab-graph data-ab-type="last-7-page-view-adblocker-percent" style="width: 95%; height: 400px; margin-bottom: 50px;">
+<graph type="last-7-page-view-adblocker-percent" style="width: 95%; height: 400px; margin-bottom: 50px;">
+</graph>
 </div>
-
 <script type="text/javascript">
     window.onload = function() {
         if(typeof adbackjs === 'object') {
