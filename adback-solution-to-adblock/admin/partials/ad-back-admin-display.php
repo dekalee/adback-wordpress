@@ -14,52 +14,58 @@
 ?>
 <?php include "ad-back-admin-header.php" ?>
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
-<h1><?php _e( 'AdBack : The stats of your AdBlock audience', 'ad-back' ); ?></h1>
+<h1><?php _e('AdBack : The stats of your AdBlock audience', 'ad-back'); ?></h1>
 
 <p>
     <?php _e('Statistics description', 'ad-back'); ?>
 </p>
 <hr class="clear">
 
-<div id="vue-app">
-<div class="col-9">
-    <datepicker></datepicker>
+<div id="ab-full-form">
+    <div id="vue-app">
+        <grid>
+        <div col="3/4">
+            <datepicker></datepicker>
 
-    <div class="block-graph">
-        <h2><?php _e('Blocked page view and percent', 'ad-back'); ?></h2>
-        <h4><?php _e('Blocked page view and percent - Sub', 'ad-back'); ?></h4>
-        <graph type="page-view-adblocker-percent"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </graph>
+            <div class="block-white">
+                <h4><?php _e('Blocked page view and percent', 'ad-back'); ?></h4>
+                <h7><?php _e('Blocked page view and percent - Sub', 'ad-back'); ?></h7>
+                <graph type="page-view-adblocker-percent"
+                       style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                </graph>
+            </div>
+
+            <div class="block-white">
+                <h4><?php _e('New - former adblock users', 'ad-back'); ?></h4>
+                <h7><?php _e('New - former adblock users - Sub', 'ad-back'); ?></h7>
+                <graph type="adblocker-new-old"
+                       style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                </graph>
+            </div>
+
+            <div class="block-white">
+                <h4><?php _e('Bounce rate of adblocker users', 'ad-back'); ?></h4>
+                <graph type="bounce"
+                       style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                </graph>
+            </div>
+
+            <div class="block-white">
+                <h4><?php _e('Browser', 'ad-back'); ?></h4>
+                <graph type="browser"
+                       style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                </graph>
+            </div>
+        </div>
+
+        <div col="1/4">
+            <div>
+                <progress-bar type="subscription"></progress-bar>
+            </div>
+            <!--ICI le block pour le status de la periode d'essai-->
+        </div>
+        </grid>
     </div>
-
-    <div class="block-graph">
-        <h2><?php _e('New - former adblock users', 'ad-back'); ?></h2>
-        <h4><?php _e('New - former adblock users - Sub', 'ad-back'); ?></h4>
-        <graph type="adblocker-new-old"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </graph>
-    </div>
-
-    <div class="block-graph">
-        <h2><?php _e('Bounce rate of adblocker users', 'ad-back'); ?></h2>
-        <graph type="bounce"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </graph>
-    </div>
-
-    <div class="block-graph">
-        <h2><?php _e('Browser', 'ad-back'); ?></h2>
-        <graph type="browser"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </graph>
-    </div>
-
-
-</div>
-</div>
-<div class="col-3">
-<!--ICI le block pour le status de la periode d'essai-->
 </div>
 <center>
     <a href="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>" target="_blank"
