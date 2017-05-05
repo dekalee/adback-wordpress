@@ -135,7 +135,8 @@ class Ad_Back_Admin extends Ad_Back_Generic
                 $this->askDomain();
             }
             // Loading AdBack library
-            wp_enqueue_script('adback', 'https://'. $this->getDomain() .'/lib/ab.min.js', $this->version, true );
+//            wp_enqueue_script('adback', 'https://'. $this->getDomain() .'/lib/ab.min.js', $this->version, true );
+            wp_enqueue_script('adback', 'http://adback.dev/built/js/ab.js', $this->version, true );
         }
 
         wp_enqueue_script('sweetalert-js', plugin_dir_url( __FILE__ ) . 'js/sweetalert2.min.js', $this->version, false );

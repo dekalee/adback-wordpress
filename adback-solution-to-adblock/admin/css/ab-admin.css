@@ -335,8 +335,8 @@ a.button.button-ab {
 .hide {
     display: none;
 }
-
-.block-graph{
+/*
+.block-graph, .block-review{
     background-color: #FFF;
     padding: 10px;
     border-radius: 10px;
@@ -352,3 +352,47 @@ a.button.button-ab {
     display: inline-block;
     width: 25%;
 }
+
+#block-progression{
+    background-color: #54AFF6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.progression{
+    font-size:15px;
+    margin:0;
+    padding:0;
+}
+
+#block-progression, .block-review{
+    text-align: center;
+}
+
+.progress-bar-holder{
+    width: 70%;
+    height: 13px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.progress-bar{
+    height: 100%;
+    background-color: #669c35;
+    border-radius: 10px;
+
+}
+
+#block-progression a.progression-link, .block-review a.progression-link{
+    display: inline-block;
+    padding: 10px;
+    color: #669c35;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}*/

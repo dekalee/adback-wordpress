@@ -21,7 +21,7 @@
 </p>
 <hr class="clear">
 
-<div id="ab-full-form">
+<div id="ab-full-app">
     <div id="vue-app">
         <grid>
         <div col="3/4">
@@ -60,9 +60,14 @@
 
         <div col="1/4">
             <div>
-                <progress-bar type="subscription"></progress-bar>
+                <progress-bar type="subscription"
+                              dashboardlink="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>"
+                              pricelink="<?php _e('https://www.adback.co/en/#prix', 'ad-back'); ?>"
+                              reviewlink="<?php _e('https://wordpress.org/support/plugin/adback-solution-to-adblock/reviews/', 'ad-back') ?>"
+                >
+
+                </progress-bar>
             </div>
-            <!--ICI le block pour le status de la periode d'essai-->
         </div>
         </grid>
     </div>
