@@ -335,6 +335,20 @@ a.button.button-ab {
 .hide {
     display: none;
 }
+.tabs a{
+    display: inline-block;
+    border: 1px solid #d4d4d4;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    color: #444;
+    text-decoration: none;
+    background-color: #b9b9b9
+}
+
+.tabs a.current{
+    background-color: transparent;
+}
 /*
 .block-graph, .block-review{
     background-color: #FFF;
