@@ -34,8 +34,10 @@
                         <today-widget></today-widget>
 
                         <h3><?php _e('Period: Last 7 days', 'ad-back'); ?></h3>
+                        <div style="margin-bottom: 10px">
                         <datepicker></datepicker>
-
+                        <browser-type></browser-type>
+                        </div>
                         <div class="block-white">
                             <h4><?php _e('Blocked page view and percent', 'ad-back'); ?></h4>
                             <h7><?php _e('Blocked page view and percent - Sub', 'ad-back'); ?></h7>
@@ -88,14 +90,14 @@
                 </page>
             </tab>
 
-            <tab header="<?php _e('Monetisation Statistics', 'ad-back'); ?>">
+            <!--<tab header="<?php /*_e('Monetisation Statistics', 'ad-back'); */?>">
                 <page>
                 <datepicker></datepicker>
                 <graph type="bounce"
                        style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
                 </graph>
                 </page>
-            </tab>
+            </tab>-->
 
 
         </tabs>
