@@ -26,9 +26,14 @@
 
         <tabs>
             <tab header="<?php _e('Global Statistics', 'ad-back'); ?>">
+                <page>
 
                 <grid>
                     <div col="3/4">
+                        <h3><?php _e('Today', 'ad-back'); ?></h3>
+                        <today-widget></today-widget>
+
+                        <h3><?php _e('Period: Last 7 days', 'ad-back'); ?></h3>
                         <datepicker></datepicker>
 
                         <div class="block-white">
@@ -80,9 +85,16 @@
                     <a href="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>" target="_blank"
                        class="button button-primary button-ab"><?php esc_html_e('Discover', 'ad-back'); ?></a>
                 </center>
+                </page>
             </tab>
 
             <tab header="<?php _e('Monetisation Statistics', 'ad-back'); ?>">
+                <page>
+                <datepicker></datepicker>
+                <graph type="bounce"
+                       style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                </graph>
+                </page>
             </tab>
 
 
