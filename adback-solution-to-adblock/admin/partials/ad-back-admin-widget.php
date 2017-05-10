@@ -12,27 +12,11 @@
  * @subpackage Ad_Back/admin/partials
  */
 ?>
-<div id="vue-app">
+<div id="adb-stats">
 <h2><?php _e('Yesterday', 'ad-back'); ?></h2>
 <br/>
-<grid id="table-page-view" type="yesterday-table-page-views">
-</grid><!--
-<table id="table-page-view" data-ab-table data-ab-type="yesterday-table-page-views" style="display: none;">
-    <thead>
-    <tr>
-        <th class="name"></th>
-        <th class="number"><?php /*_e( 'Number', 'ad-back'); */?></th>
-        <th class="rate">%</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="sample">
-        <td class="name"></td>
-        <td class="number"></td>
-        <td class="rate"></td>
-    </tr>
-    </tbody>
-</table>-->
+<tb id="table-page-view" type="yesterday-table-page-views">
+</tb>
 <hr/>
 <br/>
 <h2><?php _e('Last 7 days', 'ad-back'); ?></h2>

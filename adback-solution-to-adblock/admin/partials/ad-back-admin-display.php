@@ -22,7 +22,7 @@
 <hr class="clear">
 
 <div id="ab-full-app">
-    <div id="vue-app">
+    <div id="adb-stats">
 
         <tabs>
             <tab header="<?php _e('Global Statistics', 'ad-back'); ?>">
