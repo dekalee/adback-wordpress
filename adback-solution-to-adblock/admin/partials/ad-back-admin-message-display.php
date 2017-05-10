@@ -23,25 +23,24 @@ $allowed = $subscription['trial_status'] == 1 ? 10000 : $subscription['allowed']
 <?php include "ad-back-admin-header.php" ?>
 <h1><?php _e( 'AdBack Message', 'ad-back' ); ?></h1>
 
-<div id="ab-full-app">
-    <div id="ab-full-form"></div>
-</div>
-<div id="ab-go-settings">
-    <?php if ($showTrial) { ?>
-    <div class="ab-trial-box">
-        <h2><?php echo $progress."/".$allowed." messages"; ?></h2>
-        <div class="ab-progress">
-            <div class="ab-progress-bar" role="progressbar" style="width:<?php echo $allowed > 0 ? ceil($progress / $allowed * 100) : 100 ?>%">
+<div id="ab-full-app" style="overflow: hidden;">
+    <grid>
+        <div col="3/4">
+            <div id="ab-full-form"></div>
+        </div>
+        <div col="1/4">
+            <div id="adb-stats">
+                <progress-bar type="subscription"
+                              dashboardlink="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>"
+                              pricelink="<?php _e('https://www.adback.co/en/#prix', 'ad-back'); ?>"
+                              reviewlink="<?php _e('https://wordpress.org/support/plugin/adback-solution-to-adblock/reviews/', 'ad-back') ?>"
+                >
+
+                </progress-bar>
             </div>
         </div>
-        <?php if ($subscription['trial_status'] == 1) { ?>
-            <p>
-                <?php _e('Free trial description', 'ad-back'); ?>
-            </p>
-            <a href="https://www.adback.co" target="_blank" class="button button-ab"><?php _e('Free trial start', 'ad-back'); ?></a>
-        <?php } ?>
-    </div>
-    <?php } ?>
+    </grid>
+
 </div>
 
 <script type="text/javascript">
