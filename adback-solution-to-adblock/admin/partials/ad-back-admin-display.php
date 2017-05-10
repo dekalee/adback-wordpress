@@ -109,7 +109,8 @@
                     adbackjs.init({
                         token: '<?php echo $this->getToken()->access_token; ?>',
                         url: 'https://<?php echo $this->getDomain(); ?>/api/',
-                        language: '<?php echo str_replace('_', '-', get_locale()); ?>'
+                        language: '<?php echo str_replace('_', '-', get_locale()); ?>',
+                        version: 1
                     });
                 } else {
                     (function ($) {
@@ -120,18 +121,5 @@
                     })(jQuery);
                 }
 
-                /*(function($) {
-                 $('.tabs a').click(function () {
-                 if ($($(this).attr('href')).is(':visible')) {
-                 return false;
-                 }
-                 $(this).siblings('a.current').removeClass('current');
-                 $(this).addClass('current');
-                 $('.tab').hide();
-                 $($(this).attr('href')).show();
-                 return false;
-                 });
-
-                 })(jQuery);*/
             }
         </script>

@@ -305,7 +305,7 @@ class Ad_Back_Admin extends Ad_Back_Generic
         add_submenu_page('ab', 'AdBack Message', __('Message', 'ad-back'), 'manage_options', 'ab-message', array($this, 'displayPluginMessagePage'));
         add_submenu_page('ab', 'AdBack Settings', __('Settings', 'ad-back'), 'manage_options', 'ab-settings', array($this, 'displayPluginSettingsPage'));
 
-        add_plugins_page('Refresh domain', 'ab', 'manage_options', 'ab-refresh-domain', array($this, 'displayPluginRefreshDomainPage'));
+        add_plugins_page('ab', '', 'manage_options', 'ab-refresh-domain', array($this, 'displayPluginRefreshDomainPage'));
     }
 
     public function saveMessageCallback()

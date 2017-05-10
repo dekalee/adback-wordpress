@@ -23,7 +23,7 @@
 <br/>
 <h3><?php _e( 'Adblock removals', 'ad-back' ); ?></h3>
 <p><?php _e( '% adblock removals after showing message', 'ad-back' ); ?></p>
-<graph type="last-7-adblocker-rate" data-ab-no-data="<?php printf(esc_attr('No custom message enabled. You can enable it <a href="%s">here</a>', 'ad-back'), get_admin_url(null, 'admin.php?page=ab-settings') ); ?>" style="width: 95%; height: 200px; margin-bottom: 10px;">
+<graph type="last-7-adblocker-rate" nodata="<?php printf(esc_attr('No custom message enabled. You can enable it <a href="%s">here</a>', 'ad-back'), get_admin_url(null, 'admin.php?page=ab-settings') ); ?>" style="width: 95%; height: 200px; margin-bottom: 10px;">
 </graph>
 <hr/>
 <h3><?php _e( 'Blocked page view and percent', 'ad-back' ); ?></h3>
@@ -36,7 +36,8 @@
             adbackjs.init({
                 token: '<?php echo $this->getToken()->access_token; ?>',
                 url: 'https://<?php echo $this->getDomain(); ?>/api/',
-                language: '<?php echo str_replace('_', '-', get_locale()); ?>'
+                language: '<?php echo str_replace('_', '-', get_locale()); ?>',
+                version: 1
             });
         }
     }
