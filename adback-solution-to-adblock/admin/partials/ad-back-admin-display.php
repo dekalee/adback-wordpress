@@ -14,88 +14,112 @@
 ?>
 <?php include "ad-back-admin-header.php" ?>
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
-<h1><?php _e( 'AdBack : The stats of your AdBlock audience', 'ad-back' ); ?></h1>
+<h1><?php _e('AdBack : The stats of your AdBlock audience', 'ad-back'); ?></h1>
 
 <p>
     <?php _e('Statistics description', 'ad-back'); ?>
 </p>
 <hr class="clear">
 
-<div class="col-9">
-    <div data-ab-datepicker data-ab-type="classic" data-ab-id="global-datepicker"></div>
+<div id="ab-full-app">
+    <div id="adb-stats">
 
-    <div class="block-graph">
-        <h2><?php _e('Blocked page view and percent', 'ad-back'); ?></h2>
-        <h4><?php _e('Blocked page view and percent - Sub', 'ad-back'); ?></h4>
-        <div data-ab-graph data-ab-type="page-view-adblocker-percent" data-ab-date="global-datepicker"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </div>
-    </div>
+        <tabs>
+            <tab header="<?php _e('Global Statistics', 'ad-back'); ?>">
+                <page>
 
-    <div class="block-graph">
-        <h2><?php _e('New - former adblock users', 'ad-back'); ?></h2>
-        <h4><?php _e('New - former adblock users - Sub', 'ad-back'); ?></h4>
-        <div data-ab-graph data-ab-type="adblocker-new-old" data-ab-date="global-datepicker"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </div>
-    </div>
+                <grid>
+                    <div col="3/4">
+                        <h3><?php _e('Today', 'ad-back'); ?></h3>
+                        <today-widget></today-widget>
 
-    <div class="block-graph">
-        <h2><?php _e('Bounce rate of adblocker users', 'ad-back'); ?></h2>
-        <div data-ab-graph data-ab-type="bounce" data-ab-date="global-datepicker"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </div>
-    </div>
+                        <h3><?php _e('Period: Last 7 days', 'ad-back'); ?></h3>
+                        <div style="margin-bottom: 10px">
+                        <datepicker></datepicker>
+                        <browser-type></browser-type>
+                        </div>
+                        <div class="block-white">
+                            <h4><?php _e('Blocked page view and percent', 'ad-back'); ?></h4>
+                            <h7><?php _e('Blocked page view and percent - Sub', 'ad-back'); ?></h7>
+                            <graph type="page-view-adblocker-percent"
+                                   style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                            </graph>
+                        </div>
 
-    <div class="block-graph">
-        <h2><?php _e('Browser', 'ad-back'); ?></h2>
-        <div data-ab-graph data-ab-type="browser" data-ab-date="global-datepicker"
-             style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
-        </div>
-    </div>
+                        <div class="block-white">
+                            <h4><?php _e('New - former adblock users', 'ad-back'); ?></h4>
+                            <h7><?php _e('New - former adblock users - Sub', 'ad-back'); ?></h7>
+                            <graph type="adblocker-new-old"
+                                   style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                            </graph>
+                        </div>
 
-    <div class="loader hide"
-         style="position:absolute;width: 100%; height:100%; background-color: #FFFFFF; opacity: 0.8; text-align: center">
-        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             x="0px" y="0px"
-             width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;"
-             xml:space="preserve">
-  <path fill="#000"
-        d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
-      <animateTransform attributeType="xml"
-                        attributeName="transform"
-                        type="rotate"
-                        from="0 25 25"
-                        to="360 25 25"
-                        dur="0.6s"
-                        repeatCount="indefinite"/>
-  </path>
-  </svg>
+                        <div class="block-white">
+                            <h4><?php _e('Bounce rate of adblocker users', 'ad-back'); ?></h4>
+                            <graph type="bounce"
+                                   style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                            </graph>
+                        </div>
+
+                        <div class="block-white">
+                            <h4><?php _e('Browser', 'ad-back'); ?></h4>
+                            <graph type="browser"
+                                   style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                            </graph>
+                        </div>
+                    </div>
+
+                    <div col="1/4">
+                        <div>
+                            <progress-bar type="subscription"
+                                          dashboardlink="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>"
+                                          pricelink="<?php _e('https://www.adback.co/en/#prix', 'ad-back'); ?>"
+                                          reviewlink="<?php _e('https://wordpress.org/support/plugin/adback-solution-to-adblock/reviews/', 'ad-back') ?>"
+                            >
+
+                            </progress-bar>
+                        </div>
+                    </div>
+                </grid>
+
+
+                <center>
+                    <a href="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>" target="_blank"
+                       class="button button-primary button-ab"><?php esc_html_e('Discover', 'ad-back'); ?></a>
+                </center>
+                </page>
+            </tab>
+
+            <!--<tab header="<?php /*_e('Monetisation Statistics', 'ad-back'); */?>">
+                <page>
+                <datepicker></datepicker>
+                <graph type="bounce"
+                       style="width: 95%; height: 400px; margin-bottom: 50px; position:relative;">
+                </graph>
+                </page>
+            </tab>-->
+
+
+        </tabs>
     </div>
 </div>
-<div class="col-3">
-<!--ICI le block pour le status de la periode d'essai-->
-</div>
-<center>
-    <a href="<?php _e('https://www.adback.co/en/sites/dashboard', 'ad-back'); ?>" target="_blank"
-       class="button button-primary button-ab"><?php esc_html_e('Discover', 'ad-back'); ?></a>
-</center>
+        <script type="text/javascript">
+            window.onload = function () {
+                if (typeof adbackjs === 'object') {
+                    adbackjs.init({
+                        token: '<?php echo $this->getToken()->access_token; ?>',
+                        url: 'https://<?php echo $this->getDomain(); ?>/api/',
+                        language: '<?php echo str_replace('_', '-', get_locale()); ?>',
+                        version: 1
+                    });
+                } else {
+                    (function ($) {
+                        $("div[data-ab-graph]").each(function () {
+                            $(this).append('<?php esc_js(printf(__('No data available, please <a href="%s">refresh domain</a>', 'ad-back'),
+                                esc_url(home_url('/wp-admin/admin.php?page=ab-refresh-domain')))); ?>');
+                        });
+                    })(jQuery);
+                }
 
-<script type="text/javascript">
-    window.onload = function () {
-        if (typeof adbackjs === 'object') {
-            adbackjs.init({
-                token: '<?php echo $this->getToken()->access_token; ?>',
-                url: 'https://<?php echo $this->getDomain(); ?>/api/',
-                language: '<?php echo str_replace('_', '-', get_locale()); ?>'
-            });
-        } else {
-            (function ($) {
-                $("div[data-ab-graph]").each(function () {
-                    $(this).append('<?php esc_js(printf(__('No data available, please <a href="%s">refresh domain</a>', 'ad-back'),
-                        esc_url(home_url('/wp-admin/admin.php?page=ab-refresh-domain')))); ?>');
-                });
-            })(jQuery);
-        }
-    }
-</script>
+            }
+        </script>
